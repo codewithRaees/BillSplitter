@@ -1,12 +1,12 @@
 import React from "react";
 
-const PeopleCount = () => {
+const PeopleCount = ({ value }) => {
   return (
-    <>
-      <h1 className=" text-xl mb-2 mt-2 text-purple-700 block font-medium leading-6">
-        Number of Peoples
-      </h1>
-    </>
+    <div className=" m-auto mt-3">
+      <h6 className="  mb-2 m-auto justify-center text-purple-700 block font-medium leading-6">
+        {value}
+      </h6>
+    </div>
   );
 };
 

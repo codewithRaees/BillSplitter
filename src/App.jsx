@@ -8,24 +8,32 @@ import Footer from "./components/Footer";
 import TipsButtons from "./components/TipsButtons";
 import CustomTip from "./components/CustomTip";
 import PeopleCount from "./components/PeopleCount";
+import Button from "./components/Button";
+import BilloutPut from "./components/BilloutPut";
 
 function App() {
   return (
-    <>
+    <div className="flex justify-center flex-col ">
       <Header title="Divide your Party Bill" />
       <div className="main-wrapper flex justify-center md:flex-row flex-col m-auto mt-4">
-        <div className="bill-input md:px-4 bg-purple-50 rounded-md">
+        <div className="bill-input px-4 bg-purple-200  py-3 rounded-md">
           <InputField />
           <TipsButtons />
-          <CustomTip />
-          <PeopleCount />
+          <CustomTip placeholder="Custom Tip" name="customtip" />
+          <PeopleCount value=" Number of Peoples" />
+          <CustomTip placeholder="No of Poeples" name="peoplecount" />
+          <div className="flex justify-center m-auto mb-3 ">
+            <Button value="Generate Bill" width="w-[272px]" mtop="mt-4" />
+          </div>
         </div>
-        <div className="bill-output ">
-          <InputField />
+        <div className="bill-output px-4 w-[350px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
+          <BilloutPut value="Tip Amount : " />
+          <BilloutPut value="Total : " />
+          <BilloutPut value="Each Person Bill : " />
         </div>
       </div>
       <Footer title="codewithraees" />
-    </>
+    </div>
   );
 }
 
