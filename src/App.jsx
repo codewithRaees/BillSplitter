@@ -14,7 +14,7 @@ import BilloutPut from "./components/BilloutPut";
 function App() {
   return (
     <div className="flex justify-center flex-col ">
-      <Header title="Divide your Party Bill" />
+      <Header title="Party Bill Splitter" />
       <div className="main-wrapper flex justify-center md:flex-row flex-col m-auto mt-4">
         <div className="bill-input px-4 bg-purple-200  py-3 rounded-md">
           <InputField />
