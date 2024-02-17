@@ -1,10 +1,10 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <>
-      <div className="max-w-[1120px] bg-purple-200 flex justify-center">
-        <h1>Bill Splitter</h1>
+      <div className="py-4 mt-3 font-semibold text-purple-800  shadow-sm  bg-purple-200 m-auto flex justify-center">
+        <h1 className="text-3xl">{title}</h1>
       </div>
     </>
   );
