@@ -1,8 +1,8 @@
 import React from "react";
 const CustomTip = () => {
   return (
-    <div className="flex text-purple-700 flex-col mt-1 ml-4   m-auto justify-center">
-      <div className="w-[200px]  ">
+    <div className="flex text-purple-700 flex-col mt-1   justify-center">
+      <div className="w-[300px] m-auto  ">
         <div className="relative  rounded-md  shadow-sm">
           <input
             type="text"

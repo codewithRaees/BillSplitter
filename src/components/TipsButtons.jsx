@@ -3,8 +3,8 @@ import React from "react";
 const TipsButtons = () => {
   return (
     <>
-      <div className="flex flex-col m-2 ">
-        <div className="button-1strow m-auto mb-3">
+      <div className="flex flex-col mt-3 mb-3   ">
+        <div className="button-1strow m-auto mb-3 ">
           <h1 className=" text-xl mb-2 text-purple-700 block font-medium leading-6">
             Select Tip
           </h1>

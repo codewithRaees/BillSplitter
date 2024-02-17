@@ -7,6 +7,7 @@ import InputField from "./components/InputField";
 import Footer from "./components/Footer";
 import TipsButtons from "./components/TipsButtons";
 import CustomTip from "./components/CustomTip";
+import PeopleCount from "./components/PeopleCount";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <InputField />
           <TipsButtons />
           <CustomTip />
+          <PeopleCount />
         </div>
         <div className="bill-output ">
           <InputField />
