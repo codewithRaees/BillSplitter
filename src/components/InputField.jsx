@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-const InputField = () => {
-  const [bill, setBill] = useState(0);
+const InputField = ({ setBill }) => {
+  // const [bill, setBill] = useState(0);
   const handleChange = (event) => {
     setBill(event.target.value);
   };
-  console.log(bill);
+
   return (
     <div className="flex text-purple-700 flex-col   m-auto justify-center">
       <div className="w-[272px] ">
@@ -24,7 +24,7 @@ const InputField = () => {
             name="price"
             id="price"
             className="block w-full rounded-md border-0 py-1.5 pl-7 pr-12 text-purple-900 ring-1 ring-inset ring-purple-500 placeholder:text-purple-300 focus:outline-purple-600 text-sm sm:leading-6"
-            placeholder={bill}
+            placeholder="0.00"
             aria-describedby="price-currency"
           />
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
