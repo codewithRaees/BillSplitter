@@ -15,7 +15,7 @@ function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
 
-  // console.log(tip);
+ 
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />

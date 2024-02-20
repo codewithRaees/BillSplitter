@@ -3,7 +3,9 @@ const InputField = ({ setBill }) => {
   // const [bill, setBill] = useState(0);
   const handleChange = (event) => {
     setBill(event.target.value);
+   
   };
+
 
   return (
     <div className="flex text-purple-700 flex-col   m-auto justify-center">

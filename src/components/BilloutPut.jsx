@@ -7,9 +7,20 @@ const BilloutPut = ({ value, tip }) => {
         <p className="text-sm  mb-2 text-white my-10 m-auto justify-center  block font-medium leading-6">
           {value}
         </p>
-        <p className="text-sm  mb-2 text-white my-10 m-auto justify-center  block font-medium leading-6">
+        {}
+        switch (value) {
+          case Tip:
+            <p className="text-sm  mb-2 text-white my-10 m-auto justify-center  block font-medium leading-6">
           {tip}
         </p>
+            break;
+        
+          default:
+            break;
+        }
+          
+        
+        
       </div>
     </div>
   );
