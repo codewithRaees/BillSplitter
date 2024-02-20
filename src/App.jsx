@@ -14,8 +14,9 @@ import BilloutPut from "./components/BilloutPut";
 function App() {
   const [bill, setBill] = useState(0);
   const [tip, setTip] = useState(0);
+  const [person, setPerson] = useState(0);
+  const [customtip, setCustomTip] = useState(0);
 
- 
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />
@@ -23,7 +24,11 @@ function App() {
         <div className="bill-input px-4 bg-purple-200  py-3 rounded-md">
           <InputField setBill={setBill} />
           <TipsButtons setTip={setTip} />
-          <CustomTip placeholder="Custom Tip" name="customtip" />
+          <CustomTip
+            placeholder="Custom Tip"
+            name="customtip"
+            setCustomTip={setCustomTip}
+          />
           <PeopleCount value=" Number of Peoples" />
           <CustomTip placeholder="No of Poeples" name="peoplecount" />
           <div className="flex justify-center m-auto mb-3 ">
@@ -31,9 +36,9 @@ function App() {
           </div>
         </div>
         <div className="bill-output px-4 w-[350px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
-          <BilloutPut value="Tip Amount : " tip={tip}  />
+          <BilloutPut value="Tip Amount : " tip={tip} />
           <BilloutPut value="Total : " bill={bill} />
-          <BilloutPut value="Each Person Bill : " />
+          <BilloutPut value="Each Person Bill : " customtip={customtip} />
         </div>
       </div>
       <Footer title="codewithraees" />

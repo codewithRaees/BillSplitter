@@ -1,10 +1,15 @@
 import React from "react";
-const CustomTip = ({ placeholder, name }) => {
+const CustomTip = ({ placeholder, name, setCustomTip }) => {
+  const handleChange = (event) => {
+    setCustomTip(event.target.value);
+  };
+
   return (
     <div className="flex text-purple-700 flex-col mt-1   justify-center">
       <div className="w-[272px]  ">
         <div className="relative  rounded-md  shadow-sm">
           <input
+            onChange={handleChange}
             type="text"
             name={name}
             id="customtip"
