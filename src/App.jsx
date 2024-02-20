@@ -31,7 +31,7 @@ function App() {
           </div>
         </div>
         <div className="bill-output px-4 w-[350px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
-          <BilloutPut value="Tip Amount : " tip={tip} />
+          <BilloutPut value="Tip Amount : " tip={tip}  />
           <BilloutPut value="Total : " bill={bill} />
           <BilloutPut value="Each Person Bill : " />
         </div>
