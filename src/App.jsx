@@ -10,6 +10,7 @@ import CustomTip from "./components/CustomTip";
 import PeopleCount from "./components/PeopleCount";
 import Button from "./components/Button";
 import BilloutPut from "./components/BilloutPut";
+import NumberofPeople from "./components/NumberofPeople";
 
 function App() {
   const [bill, setBill] = useState(0);
@@ -17,6 +18,15 @@ function App() {
   const [person, setPerson] = useState(0);
   const [customtip, setCustomTip] = useState(0);
 
+  // const TipCalculated = parseInt((bill * tip) / 100);
+  let result;
+  if (tip) {
+    result = parseInt((bill * tip) / 100);
+  } else if (customtip) {
+    result = parseInt((bill * customtip) / 100);
+  }
+  const TotalBill = parseInt(bill) + parseInt(result);
+  const EachoneBill = parseInt(TotalBill) / parseInt(person);
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />
@@ -30,15 +40,19 @@ function App() {
             setCustomTip={setCustomTip}
           />
           <PeopleCount value=" Number of Peoples" />
-          <CustomTip placeholder="No of Poeples" name="peoplecount" />
+          <NumberofPeople
+            placeholder="No of Poeples"
+            name="peoplecount"
+            setPerson={setPerson}
+          />
           <div className="flex justify-center m-auto mb-3 ">
             <Button value="Generate Bill" width="w-[272px]" mtop="mt-4" />
           </div>
         </div>
         <div className="bill-output px-4 w-[350px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
-          <BilloutPut value="Tip Amount : " tip={tip} />
-          <BilloutPut value="Total : " bill={bill} />
-          <BilloutPut value="Each Person Bill : " customtip={customtip} />
+          <BilloutPut value="Tip Amount : " tip={result} />
+          <BilloutPut value="Total : " bill={TotalBill} />
+          <BilloutPut value="Each Person Bill : " customtip={EachoneBill} />
         </div>
       </div>
       <Footer title="codewithraees" />

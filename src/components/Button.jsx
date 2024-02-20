@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Button = ({ value, width, mtop, setTip }) => {
   const handleClick = (event) => {
     event.preventDefault();
-    setTip(value);
+    setTip(parseInt(event.target.value));
     console.log(value);
   };
   return (
