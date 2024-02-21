@@ -32,11 +32,18 @@ function App() {
   }
   const TotalBill = parseInt(bill) + parseInt(result);
   const EachoneBill = parseInt(TotalBill) / parseInt(person);
+  const clearField(){
+    setBill("")
+    setTip("")
+    setCustomTip("")
+    
+
+  }
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />
       <div className="main-wrapper flex justify-center md:flex-row flex-col m-auto mt-4">
-        <form onSubmit={handleSubmit} className="flex">
+        <form onSubmit={handleSubmit} className="flex md:flex-row flex-col">
           <div className="bill-input px-4 bg-purple-200  py-3 rounded-md">
             <InputField setBill={setBill} />
             <TipsButtons setTip={setTip} />
