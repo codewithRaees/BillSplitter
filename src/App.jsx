@@ -32,12 +32,12 @@ function App() {
   }
   const TotalBill = parseInt(bill) + parseInt(result);
   const EachoneBill = parseInt(TotalBill) / parseInt(person);
-  const clearFields = () => {
+  function clearFields() {
     setBill(" ");
     setTip(" ");
     setCustomTip(" ");
     setPerson(" ");
-  };
+  }
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />
@@ -66,17 +66,23 @@ function App() {
               />
             </div>
           </div>
-          <div className="bill-output px-4 w-[350px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
-            {formSubmitted && (
-              <>
-                <BilloutPut value="Tip Amount : " tip={result} />
-                <BilloutPut value="Total : " bill={TotalBill} />
-                <BilloutPut
-                  value="Each Person Bill : "
-                  customtip={EachoneBill}
-                />
-              </>
-            )}
+          <div className="bill-output px-4  w-[250px]  bg-purple-500 md:ml-5 mt-5 md:mt-0 py-3 rounded-md">
+            <div className="flex flex-col justify-center">
+              <h1 className="text-white font-bold text-xl">Calculated Bill</h1>
+              <hr class="w-48 h-[2px]   bg-white  rounded " />{" "}
+            </div>
+            <BilloutPut
+              value="Tip Amount : "
+              tip={formSubmitted === true ? result : null}
+            />
+            <BilloutPut
+              value="Total : "
+              bill={formSubmitted === true ? TotalBill : null}
+            />
+            <BilloutPut
+              value="Each Person Bill : "
+              customtip={formSubmitted === true ? EachoneBill : null}
+            />
           </div>
         </form>
       </div>

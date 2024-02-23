@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { flushSync } from "react-dom";
 
 const TipsButtons = ({ setTip }) => {
   const [tipamount, setTipAmount] = useState();
