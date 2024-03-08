@@ -32,12 +32,7 @@ function App() {
   }
   const TotalBill = parseInt(bill) + parseInt(result);
   const EachoneBill = parseInt(TotalBill) / parseInt(person);
-  function clearFields() {
-    setBill(" ");
-    setTip(" ");
-    setCustomTip(" ");
-    setPerson(" ");
-  }
+
   return (
     <div className="flex justify-center flex-col ">
       <Header title="Party Bill Splitter" />

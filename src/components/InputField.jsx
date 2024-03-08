@@ -3,9 +3,7 @@ const InputField = ({ setBill }) => {
   // const [bill, setBill] = useState(0);
   const handleChange = (event) => {
     setBill(event.target.value);
-   
   };
-
 
   return (
     <div className="flex text-purple-700 flex-col   m-auto justify-center">
@@ -29,6 +27,7 @@ const InputField = ({ setBill }) => {
             placeholder="0.00"
             aria-describedby="price-currency"
           />
+
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
             <span className="text-purple-800 sm:text-sm" id="price-currency">
               PKR
